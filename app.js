@@ -90,10 +90,10 @@
 // }
 // console.log(sum);
 
-let a = 2.0;
+// let a = 1.0;
 
-let sum = 0;
-for (let h = -Math.PI / 2.0; h <= Math.PI; h += Math.PI / 19.0) {
-  sum = sum + (a ** a) ** 1.0 / 3.0 + h ** 2.0 * Math.cos(a * h);
-}
-console.log(sum);
+// let sum = 0;
+// for (let h = 0; h <= 10; h += 1 / 2) {
+//   sum = sum + a * Math.cos(h) - Math.sin(h ** 2);
+// }
+// console.log(sum);
