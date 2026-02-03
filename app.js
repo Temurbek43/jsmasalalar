@@ -98,51 +98,116 @@
 // }
 // console.log(sum);
 
-function faqtarial(n) {
-  let sm = 1;
-  for (let i = 1; i <= n; i++) {
-    sm *= i;
-  }
-  return sm;
-}
+// function faqtarial(n) {
+//   let sm = 1;
+//   for (let i = 1; i <= n; i++) {
+//     sm *= i;
+//   }
+//   return sm;
+// }
 
-let n = 2;
-let x = 1;
+// let n = 2;
+// let x = 1;
 
-let sum = 0;
-for (let i = 1; i <= n; i++) {
-  sum += x ** i / faqtarial(i);
-}
-console.log(sum);
+// let sum = 0;
+// for (let i = 1; i <= n; i++) {
+//   sum += x ** i / faqtarial(i);
+// }
+// console.log(sum);
 
-// function declaratins
-salom();
-function salom() {
-  console.log("Assalomu aleykum");
-}
-// function expression
-let alik = function () {
-  console.log("Va aleykum assalom");
-};
-alik();
+// // function declaratins
+// salom();
+// function salom() {
+//   console.log("Assalomu aleykum");
+// }
+// // function expression
+// let alik = function () {
+//   console.log("Va aleykum assalom");
+// };
+// alik();
 
-// arrow function
-const hi = () => {
-  console.log("hi");
-};
-hi();
+// // arrow function
+// const hi = () => {
+//   console.log("hi");
+// };
+// hi();
 
-function birthDate(currY, age) {
-  if (typeof age == "number" && typeof currY == "number") {
-    console.log(currY - age);
+// function birthDate(currY, age) {
+//   if (typeof age == "number" && typeof currY == "number") {
+//     console.log(currY - age);
+//   } else {
+//     console.log("invalid data");
+//   }
+// }
+
+// birthDate(2026, 16);
+
+// let arifmetik = function (a, b, c) {
+//   console.log((a + b + c) / 3);
+// };
+// arifmetik(33, 28, 17);
+
+// let Arrow = (a) => {
+//   if (0 < a) {
+//     console.log("musbat");
+//   }
+//   if (a == 0) {
+//     console.log("o ga teng");
+//   }
+//   if (0 > a) {
+//     console.log("manfiy");
+//   }
+// };
+// Arrow(-1);
+
+// function daraja(a, b = 2) {
+//   console.log(a ** b);
+// }
+// daraja(3, 4);
+// daraja(3);
+// (a, b = 2) => {
+//   console.log(a ** b);
+// };
+// daraja(3, 4);
+// daraja(3);
+
+// function faqtarial(n) {
+//   let sm = 1;
+//   for (let i = 1; i <= n; i++) {
+//     sm *= i;
+//   }
+//   return sm;
+// }
+
+// function juftyigindi(n) {
+//   let sum = 0;
+//   for (let i = 0; i <= n; i += 2) {
+//     sum += i;
+//   }
+//   console.log(sum);
+// }
+// juftyigindi(10);
+
+let baholar = function (a, b, c) {
+  let arrage = (a + b + c) / 3;
+  if (arrage >= 80) {
+    console.log("Alo");
+  } else if (60 <= arrage < 80) {
+    console.log("Yaxshi");
   } else {
-    console.log("invalid data");
+    console.log("Qoniqarsiz");
   }
-}
-
-birthDate(2026, 16);
-
-let arifmetik = function (a, b, c) {
-  console.log((a + b + c) / 3);
 };
-arifmetik(33, 28, 17);
+baholar(50, 60, 55);
+baholar(90, 80, 85);
+
+function toqsonlar(a, b) {
+  let count = 0;
+  for (let i = a; i <= b; i++) {
+    if (i % 2 !== 0) {
+      count++;
+    }
+  }
+  console.log(count);
+}
+toqsonlar(1, 10);
