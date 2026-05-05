@@ -188,26 +188,60 @@
 // }
 // juftyigindi(10);
 
-let baholar = function (a, b, c) {
-  let arrage = (a + b + c) / 3;
-  if (arrage >= 80) {
-    console.log("Alo");
-  } else if (60 <= arrage < 80) {
-    console.log("Yaxshi");
-  } else {
-    console.log("Qoniqarsiz");
-  }
-};
-baholar(50, 60, 55);
-baholar(90, 80, 85);
+// let baholar = function (a, b, c) {
+//   let arrage = (a + b + c) / 3;
+//   if (arrage >= 80) {
+//     console.log("Alo");
+//   } else if (60 <= arrage < 80) {
+//     console.log("Yaxshi");
+//   } else {
+//     console.log("Qoniqarsiz");
+//   }
+// };
+// baholar(50, 60, 55);
+// baholar(90, 80, 85);
 
-function toqsonlar(a, b) {
-  let count = 0;
-  for (let i = a; i <= b; i++) {
-    if (i % 2 !== 0) {
-      count++;
-    }
-  }
-  console.log(count);
-}
-toqsonlar(1, 10);
+// function toqsonlar(a, b) {
+//   let count = 0;
+//   for (let i = a; i <= b; i++) {
+//     if (i % 2 !== 0) {
+//       count++;
+//     }
+//   }
+//   console.log(count);
+// }
+// toqsonlar(1, 10);
+
+// localStorage.setItem("name", "Rajabboy");
+// let oldim = localStorage.getItem("name");
+// console.log(oldim);
+
+// sessionStorage.setItem("salom", "alik");
+// console.log(sessionStorage.getItem("salom"));
+
+// let btn = document.querySelector(".btn");
+// let todo = document.querySelector(".todo");
+
+// btn.addEventListener("click", () => {
+//   let todo_id = document.querySelector(".todo_id").value;
+//   fetch(`https://jsonplaceholder.typicode.com/todos/${todo_id}`).then((res) =>
+//     res
+//       .json()
+//       .then((data) => (todo.textContent = data.title))
+//       .catch((err) => console.log(err)),
+//   );
+// });
+
+let box = document.querySelector(".box");
+fetch(`https://jsonplaceholder.typicode.com/posts`).then((res) =>
+  res
+    .json()
+    .then((posts) => {
+      posts.forEach((tit) => {
+        let p = document.createElement("p");
+        p.textContent = tit.title;
+        box.appendChild(p);
+      });
+    })
+    .catch((err) => console.log(err)),
+);
